@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+.link-a {
+    font-family: Ubuntu, Arial;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 2.5rem;
+    /* padding-top: 22px; */
+    /* padding-bottom: 22px; */
+    font-weight: bold;
+    position: relative;
+    transition: all ease 0.3s;
+    border-bottom: 2px dashed rgb(54, 54, 54);
+}
+.link-a:hover {
+    color: #F6871F;
+    border-bottom: 2px dashed #fff;
+}
+
+.active::after {
+    position: absolute;
+    content:"";
+    background: #F6871F;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    /* margin-left: 10px; */
+    display: inline-block;
+    /* vertical-align: middle; */
+    left: -25px;
+    top: 5px;
+    z-index: 3;
+}
+
+nav {
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
+}
+
+.main-page {
+    background-color: #F3FFDB;
+    height: 90vh;
+    background-repeat: no-repeat;
+    block-size: contain;
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-around;
+}
+
+h1 {
+    margin: 0px;
+}
+
+
+.section-l {
+    max-width: 43%;
+}
+.section-r {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    justify-content: center;
+
+}
+
+.for-thl {
+    color: #F6871F;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.for-thl::after {
+    content: "";
+    position: absolute;
+    background-color: #25273A;
+    height: 0.5%;
+    width: 29%;
+    display: flex;
+    bottom: 35%;
+}
+
+h1 {
+    color: #25273A;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 6rem;
+    word-wrap: break-word;
+}
+
+.robot {
+    width: 100%;
+    /* height: 490px; */
+}
+
+.start {
+    text-decoration: none;
+    position: relative;
+    font-size: 4rem;
+    font-family: Ubuntu;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #F6871F;
+    padding-left: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 14%;
+    border-radius: 60px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    /* width: 90%; */
+    box-shadow: 0px 0px 0px 0px #ae3f20;
+    transition: all ease 0.3s;
+}
+
+.start::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-image: url(../img/arrow.png);
+    width: 25px;
+    height: 20px;
+    /* right: ; */
+    /* bottom: ; */
+    top: calc(50% - 10px);
+    right: 30px;
+    background-size: cover;
+}
+
+.start:hover {
+    box-shadow: 15px 12px 0px 0px #d25f3f;
+}
+
+@media screen and ( max-width: 960px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+.topics {
+    background-color: #F6871F;
+    /* list-style-type: none; */
+    height: 90vh;
+    width: 30%;
+    /* max-width: ; */
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#scrollbar1::-webkit-scrollbar {
+    width: 12px;
+}
+
+#scrollbar1::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #F6871F;
+    border: 1px solid #F6871F;
+}
+
+#scrollbar1::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-clip: content-box;
+    background-color: #b44f34;
+}
+
+.topic {
+    text-decoration: none;
+    font-family: Ubuntu, Arial;
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 15px;
+    padding-left: 5%;
+    word-break: normal;
+    overflow-wrap: break-word;
+    transition: all ease 0.3s;
+}
+
+.main-page-1 {
+    background-color: #F3FFDB;
+    background-repeat: no-repeat;
+    block-size: contain;
+    display: flex;
+}
+
+.simple-text {
+    color: #25273A;
+    font-family: Ubuntu;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+.sheme {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+.main-page-2 {
+    background-color: #F3FFDB;
+    height: 90vh;
+    block-size: contain;
+    width: 100%;
+}
+
+.h1-another {
+    color: rgb(54, 54, 54);
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 4rem;
+    word-wrap: break-word;
+    border-bottom: 3px solid #ae3f20;
+    padding: 10px;
+}
+
+.topic-content {
+    width: 70%;
+}
+
+.small-topic {
+    font-size: 1.8rem;
+    line-height: 25px;
+    text-decoration: none;
+    font-family: Ubuntu, Arial;
+    color: #FFF;
+    /* font-weight: bold; */
+    word-break: normal;
+    overflow-wrap: break-word;
+    
+}
+
+.color-change {
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: all ease 0.2s;
+    border-bottom: 2px solid rgba(126, 77, 17, 0.395);
+}
+
+.color-change:hover {
+    background-color: #b44f34;
+}
+
+.small-topic-2 {
+    font-size: 3rem;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+.teory {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#scrollbar2::-webkit-scrollbar {
+    width: 12px;
+}
+
+#scrollbar2::-webkit-scrollbar-track {
+    background-color: #F3FFDB;
+    border: 1px solid #F3FFDB;
+}
+
+#scrollbar2::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: #F6871F;
+}
+
+.pad-bot {
+    padding-bottom: 30px;
+}
+
+.linkk {
+    padding: 15px;
+    padding-left: 25px;
+    font-family: Ubuntu, Arial;
+    font-size: 1.8rem;
+    color: #282424;
+}
