@@ -6,7 +6,7 @@
 
 let content = document.querySelector(".topic-content")
 console.log(list)
-let links = document.querySelectorAll(".small-topic")
+let links = document.querySelectorAll(".color-change")
 links.forEach(
     (link)=>{
         console.log(link.dataset.id)
@@ -16,7 +16,6 @@ links.forEach(
         });
     }
 )
-
 
 
 
