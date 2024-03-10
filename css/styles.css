@@ -9,6 +9,10 @@
 html {
     font-size: 10px;
 }
+
+html::-webkit-scrollbar {
+    display: none;
+}
 .link-a {
     font-family: Ubuntu, Arial;
     color: rgb(255, 255, 255);
@@ -127,19 +131,17 @@ h1 {
     transition: all ease 0.3s;
 }
 
-.start::after {
+/* .start::after {
     content: "";
     display: inline-block;
     position: absolute;
     background-image: url(../img/arrow.png);
     width: 25px;
     height: 20px;
-    /* right: ; */
-    /* bottom: ; */
     top: calc(50% - 10px);
     right: 30px;
     background-size: cover;
-}
+} */
 
 .start:hover {
     box-shadow: 15px 12px 0px 0px #d25f3f;
@@ -155,11 +157,13 @@ h1 {
     background-color: #F6871F;
     /* list-style-type: none; */
     height: 90vh;
-    width: 30%;
+    min-width: 30%;
     /* max-width: ; */
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    z-index: 2;
+    transition: all 1s ease;
 }
 
 #scrollbar1::-webkit-scrollbar {
@@ -233,7 +237,11 @@ h1 {
 }
 
 .topic-content {
-    width: 70%;
+    min-width: 70%;
+    max-width: 100%;
+    /* margin: 0 auto; */
+    overflow: hidden;
+    /* z-index: -1; */
 }
 
 .small-topic {
@@ -271,6 +279,7 @@ h1 {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    /* overflow: hidden; */
 }
 
 #scrollbar2::-webkit-scrollbar {
@@ -311,4 +320,17 @@ h1 {
 
 .boody {
     position: relative;
+}
+
+.active-b {
+    background-color: transparent;
+}
+
+.passive-b {
+    background-color: transparent;
+    transform: rotate(-180deg);
+}
+
+.hidden {
+    display: none;
 }
