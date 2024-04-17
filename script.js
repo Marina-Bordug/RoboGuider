@@ -4,21 +4,27 @@
 // d.innerHTML = list[0]["text"]
 
 document.querySelector("button").addEventListener("click", (e) => {
-
     document.querySelector(".topics").classList.toggle("hidden");
     document.querySelector(".active-b").classList.toggle("passive-b");
+    document.querySelector(".topic-content").classList.toggle("topic-content-w");
 })
-
 
 let content = document.querySelector(".topic-content")
 let links = document.querySelectorAll(".color-change")
+links[0].classList.add("active-link");
+content.innerHTML = list[links[0].dataset.id]["text"];
 links.forEach(
     (link) => {
 
         link.addEventListener("click", event => {
-
-            link.style.color = "#b44f34"
-            content.innerHTML = list[link.dataset.id]["text"]
+            links.forEach(
+                (linka) => {
+                    linka.classList.remove("active-link"); 
+                }
+            )
+            link.classList.add("active-link");
+            // link.style.backgroundColor = "#b44f34";
+            content.innerHTML = list[link.dataset.id]["text"];
             let st = window.getComputedStyle(content, null);
             let bottom = -parseInt(st['height']) / 6;
 
