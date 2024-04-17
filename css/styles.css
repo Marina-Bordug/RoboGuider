@@ -8,10 +8,27 @@
 
 html {
     font-size: 10px;
+    animation: showsite 0.4s;
+    animation-fill-mode: forwards ;
+    opacity: 0.5;
+    transform: scaleX(0);
 }
 
 html::-webkit-scrollbar {
     display: none;
+}
+
+
+@keyframes showsite {
+    0%{
+        opacity: 0.5;
+        transform: scaleX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    
 }
 .link-a {
     font-family: Ubuntu, Arial;
@@ -82,6 +99,7 @@ h1 {
 
 .section-l {
     max-width: 43%;
+    align-self: center;
 }
 .section-r {
     display: flex;
@@ -121,6 +139,7 @@ h1 {
 .robot {
     width: 100%;
     /* height: 490px; */
+    
 }
 
 .start {
@@ -168,15 +187,24 @@ h1 {
 .topics {
     background-color: #F6871F;
     /* list-style-type: none; */
-    height: 90vh;
-    min-width: 30%;
+    /* height: 90vh; */
+    /* min-width: 30%; */
+    /* width: 210px; */
     /* max-width: ; */
+    width: 300px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     z-index: 2;
-    transition: all 1s ease;
-    height: calc(100vh - 50px);
+    /* transition: all 1s ease; */
+    /* height: calc(100vh - 50px); */
+    height: 100%;
+    resize:horizontal;
+    overflow-x: hidden;
+}
+
+topics > ul {
+    list-style: none;
 }
 
 #scrollbar1::-webkit-scrollbar {
@@ -202,7 +230,7 @@ h1 {
     font-weight: bold;
     font-size: 2rem;
     padding: 15px;
-    padding-left: 5%;
+    /* padding-left: 5%; */
     word-break: normal;
     overflow-wrap: break-word;
     transition: all ease 0.3s;
@@ -253,11 +281,17 @@ h1 {
 }
 
 .topic-content {
-    min-width: 70%;
-    max-width: 100%;
-    /* margin: 0 auto; */
+    flex-grow: 1;
+    /* width: calc(100% - 210px); */
+    /* max-width: 100%; */
     overflow: hidden;
-    /* z-index: -1; */
+    /* height: calc(100vh - 50px); */
+    height: 100%;
+}
+
+.topic-content-w {
+    width: 100%;
+    overflow: hidden;
     height: calc(100vh - 50px);
 }
 
@@ -274,11 +308,16 @@ h1 {
 }
 
 .color-change {
+    /* background-color: #F6871F; */
     padding-left: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     transition: all ease 0.2s;
     border-bottom: 2px solid rgba(126, 77, 17, 0.395);
+}
+
+.active-link {
+    background-color: #b44f34;
 }
 
 .color-change:hover {
@@ -342,7 +381,7 @@ h1 {
 
 .active-b {
     margin-left: 2rem;
-    width: 45px;
+    width: 50px;
     background-color: transparent;
     border: none;
     outline: none; 
@@ -355,7 +394,7 @@ h1 {
     width: 80%;    
 }
 
-.passive-b {
+.passive-b > img{
     background-color: transparent;
     transform: rotate(-180deg);
 }
