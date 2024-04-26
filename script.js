@@ -2,11 +2,39 @@
 // let d = document.querySelector(".titles");
 
 // d.innerHTML = list[0]["text"]
-
-document.querySelector("button").addEventListener("click", (e) => {
+const topics = document.querySelector(".topics")
+const topicContent =  document.querySelector(".topic-content")
+document.querySelector(".active-b").addEventListener("click", (e) => {
     document.querySelector(".topics").classList.toggle("hidden");
+    // document.querySelector(".topics").classList.toggle("nonhidden");
     document.querySelector(".active-b").classList.toggle("passive-b");
     document.querySelector(".topic-content").classList.toggle("topic-content-w");
+    let startLeft;
+    if (topics.classList.contains("hidden")) {
+        startLeft = 0
+    } else {
+        startLeft = -300
+    }
+
+    let timerId = setInterval(() => {
+        
+        if (topics.classList.contains("hidden")) {
+            startLeft-=5
+        } else {
+            startLeft+=5
+        }
+        topics.style.left = `${startLeft}px`;
+        topicContent.style.paddingLeft = `${300+startLeft}px`;
+        console.log(startLeft)
+        if (startLeft>=0 || startLeft <= -300) {
+            clearInterval(timerId);
+
+        }
+        
+    }, 1);
+     
+    
+    
 })
 
 let content = document.querySelector(".topic-content")
@@ -50,5 +78,6 @@ links.forEach(
         });
     }
 )
+
 
 
