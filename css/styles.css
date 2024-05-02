@@ -425,33 +425,61 @@ topics>ul {
     animation-fill-mode: both;
 }
 
-/* .hidden { */
-    /* left: -300px; */
+#code {
+    width: 80%;
+    /* float: left; */
+    min-height: 50vh;
+    /* max-height: 100vh; */
+    /* overflow-y: scroll; */
+    margin: 0 auto;
+}
 
-    /* animation-name: hidetopics;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-direction: normal;
-    animation-direction: alternate-reverse;
-    display: none; */
-    /* animation-iteration-count: infinite; */
-    
-    /* transform: translateX(0); */
-    
-    /* width: 0px !important; */
-    
-/* } 
-/* 
-@keyframes hidetopics { 
-    0% {
-        left: 0px; */
-        /* width:  300px !important;
-        min-width:  300px !important; */
-    /* }
+.run {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #F6871F;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 5px;
+  min-width: 0;
+  outline: none;
+  padding: 5px 3px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 60px;
+  will-change: transform;
+  margin-top: 5px;
+}
 
-    100% {
-        left: -300px; */
-        /* width: 0px !important;
-        min-width: 0px !important; */
-    /* }
-}  */
+.run:disabled {
+  pointer-events: none;
+}
+
+.run:hover {
+  color: #fff;
+  background-color: #F6871F;
+}
+
+.run:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.output {
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+}
+
