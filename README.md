@@ -25,6 +25,8 @@
 - <img width="959" alt="сайт-11" src="https://github.com/Marina-Bordug/RoboGuider/assets/116741086/4c33caa0-fb93-44d7-85f5-6c8ceebe45d8">
 <img width="959" alt="сайт-22" src="https://github.com/Marina-Bordug/RoboGuider/assets/116741086/d3d9122e-7188-43b5-ab00-d51f88bbcfbf">
 <img width="959" alt="сайт-33" src="https://github.com/Marina-Bordug/RoboGuider/assets/116741086/beae5cfd-0386-437d-9f89-7bd4b6e56060">
+# Презентация
+https://docs.google.com/presentation/d/1okDoAN2uisrY02bRK3EepWR0dT3-XbeU/edit?usp=sharing&ouid=110485872952128049518&rtpof=true&sd=true
 
 
 
