@@ -1,6 +1,6 @@
-var code;
+// var code;
     
-$(function() {
+// $(function() {
 
     // var code = editor.create(document.getElementById("container"), {
     //     value: "// First line\nfunction hello() {\n\talert('Hello world!');\n}\n// Last line",
@@ -14,20 +14,35 @@ $(function() {
     // });
 
 
-    code = ace.edit("code");  
-    console.log(code)                    // создаем редактор из элемента с id="code"
-    code.setTheme("ace/theme/twilight");           // выбираем тему оформления для подсветки синтаксиса
-    code.getSession().setMode("ace/mode/c_cpp");  // говорим что код надо подсвечивать как C++ код
-    code.setShowPrintMargin(false);               // опционально: убираем вертикальную границу в 80 сиволов
-    code.setOptions({
-        // maxLines: Infinity,                    // опционально: масштабировать редактор вертикально по размеру кода
-        fontSize: "12pt", 
-        readOnly: false,
-                          // опционально: размер шрифта ставим побольше
-    });
+    // code = ace.edit("code");  
+    // console.log(code)                    // создаем редактор из элемента с id="code"
+    // code.setTheme("ace/theme/twilight");           // выбираем тему оформления для подсветки синтаксиса
+    // code.getSession().setMode("ace/mode/c_cpp");  // говорим что код надо подсвечивать как C++ код
+    // code.setShowPrintMargin(false);               // опционально: убираем вертикальную границу в 80 сиволов
+    // code.setOptions({
+    //     // maxLines: Infinity,                    // опционально: масштабировать редактор вертикально по размеру кода
+    //     fontSize: "12pt", 
+    //     readOnly: false,
+    //                       // опционально: размер шрифта ставим побольше
+    // });
 
-    code.$blockScrolling = Infinity;              // отключаем устаревшие, не поддерживаемые фишки редактора
-});
+    // code.$blockScrolling = Infinity;              // отключаем устаревшие, не поддерживаемые фишки редактора
+
+    // code = ace.edit("code2");  
+    // console.log(code)                    // создаем редактор из элемента с id="code"
+    // code.setTheme("ace/theme/twilight");           // выбираем тему оформления для подсветки синтаксиса
+    // code.getSession().setMode("ace/mode/c_cpp");  // говорим что код надо подсвечивать как C++ код
+    // code.setShowPrintMargin(false);               // опционально: убираем вертикальную границу в 80 сиволов
+    // code.setOptions({
+    //     // maxLines: Infinity,                    // опционально: масштабировать редактор вертикально по размеру кода
+    //     fontSize: "12pt", 
+    //     readOnly: false,
+    //                       // опционально: размер шрифта ставим побольше
+    // });
+
+    // code.$blockScrolling = Infinity;              // отключаем устаревшие, не поддерживаемые фишки редактора
+
+// });
 
 
 
@@ -60,6 +75,9 @@ function run(e) {
 
 let btn = $('#run')
 btn.click(run)
+
+
+
 
 
 
